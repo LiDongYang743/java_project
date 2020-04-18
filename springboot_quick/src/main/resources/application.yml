@@ -1,0 +1,31 @@
+#普通数据格式
+name: zhansan
+
+# 对象类型配置
+person:
+  name: 战三
+  age: 14
+  addr: beijing
+
+
+server:
+  port: 8082
+  servlet:
+    context-path: /ssh
+
+# 数组、集合类型(存储字符串)
+city:
+- name
+- age
+- addr
+# 数组、集合类型(对象类型)
+city1:
+- name: zhangsan
+  age: 13
+  addr: beijing
+- name: lisi
+  age: 165
+  addr: zhengzhou
+
+
+
