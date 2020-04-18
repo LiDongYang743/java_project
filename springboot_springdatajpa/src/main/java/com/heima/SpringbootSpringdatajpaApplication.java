@@ -10,4 +10,8 @@ public class SpringbootSpringdatajpaApplication {
         SpringApplication.run(SpringbootSpringdatajpaApplication.class, args);
     }
 
+    public static  void test(){
+        System.out.println("“hello”");
+    }
+
 }
