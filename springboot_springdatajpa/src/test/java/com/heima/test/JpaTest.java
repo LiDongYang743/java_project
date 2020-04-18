@@ -34,4 +34,11 @@ public class JpaTest {
         User user = userRepository.findByusernameAndPassword("zhangsan","123");
         System.out.println("user = " + user);
     }
+
+
+    @Test
+    public void test(){
+        User user = userRepository.findByusernameAndPassword("lisi","123");
+        System.out.println("user = " + user);
+    }
 }
