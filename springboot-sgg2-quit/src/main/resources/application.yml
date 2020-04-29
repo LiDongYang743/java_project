@@ -1,0 +1,14 @@
+person:
+   id: 1
+   name: zhangsan
+   age: lisi
+   data: 2020/05/01
+   maps: {k1: v1,k2: v2}
+   lists:
+     - lsis
+     - zjamshan
+     - wangwu
+   dog:
+      name: 小狗
+      age: 1
+
