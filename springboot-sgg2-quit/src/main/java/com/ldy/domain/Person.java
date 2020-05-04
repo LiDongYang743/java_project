@@ -1,6 +1,8 @@
 package com.ldy.domain;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.List;
@@ -11,12 +13,20 @@ import java.util.Map;
  * @create 2020-04-29 20:30
  */
 @Component
+//@PropertySource("classpath:person.properties")
 @ConfigurationProperties(prefix = "person")
 public class Person {
 
+    @Value("${person.id}")
     private Integer id;
+
+    @Value("${person.name}")
     private  String name;
+
+    @Value("#{11*2}")
     private Integer age;
+
+    @Value("${person.data}")
     private Date data;
     private Map<String,String> maps;
     private List<Object>  lists;
@@ -27,6 +37,7 @@ public class Person {
         return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", age=" + age +
                 ", data=" + data +
                 ", maps=" + maps +
                 ", lists=" + lists +
@@ -81,4 +92,5 @@ public class Person {
     public void setDog(Dog dog) {
         this.dog = dog;
     }
+
 }
