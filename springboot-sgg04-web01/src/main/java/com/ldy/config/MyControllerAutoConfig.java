@@ -25,13 +25,18 @@ public class MyControllerAutoConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public LocaleResolver localeResolver(){
+    public LocaleResolver localeResolver() {
         return new MyLocaleResolver();
     }
 
+    //注册拦截器
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        //super.addInterceptors(registry);
+        //静态资源；  *.css , *.js
+        //SpringBoot已经做好了静态资源映射  addPathPatterns配置资源过滤 /**拦截全部资源
         registry.addInterceptor(new MyHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("login.html","/user/login","login","index.html");
+                .excludePathPatterns("/index.html", "/", "/user/login", "login.html", "/asserts/**", "/webjars/bootstrap/**");
+        // excludePathPatterns 配置资源不过滤
     }
 }
