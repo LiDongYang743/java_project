@@ -1,6 +1,5 @@
 package com.ldy.componet;
 
-import org.apache.tomcat.jni.Local;
 import org.springframework.web.servlet.LocaleResolver;
 import org.thymeleaf.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
